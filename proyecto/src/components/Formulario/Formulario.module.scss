@@ -1,0 +1,60 @@
+@import "../../sass/utilities/variables.scss";
+
+.formSocios {
+    display: grid;
+    grid-template-rows: 7rem 7rem 7rem 7rem 7rem 7rem auto;
+    gap: 5rem;
+    margin-top: 8rem;
+    background-color: $colorUno;
+    color: $colorTres;
+    padding: 3rem 2.5rem 2.5rem;
+    border-radius: 25px;
+    div {
+        background-color: $colorDos;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 1rem 1.5rem;
+        p {
+            margin-bottom: 0.5rem;
+            margin-left: 5px;
+        }
+        .advertencia {
+            display: block;
+            color: yellow;
+            font-size: 10px;
+        }
+        
+        .noMostrar {
+            display: none;
+        }
+
+        input {
+            background-color: $colorTres;
+            padding: 3px 0 3px 6px;
+            font-size: 14px;
+        }
+    }
+    .btns {
+        background-color: transparent;
+        flex-direction: row;
+        gap: 2rem;
+        input {
+            background-color: $colorCinco;
+            padding: 0.8rem;
+            border: none;
+            border-radius: 10px;
+        }
+    }
+}
+
+@media (min-width: 1100px) {
+  Form {
+    margin-top: 12rem;
+    width: 38rem;
+    grid-template-rows: 10rem 10rem 10rem 10rem 10rem 10rem auto;
+    gap: 7rem;
+    padding: 3.5rem 3.5rem 2.5rem;
+    border-radius: 10px;
+  }  
+}

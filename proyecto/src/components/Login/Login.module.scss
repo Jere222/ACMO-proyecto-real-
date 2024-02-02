@@ -1,0 +1,26 @@
+@import '../../sass/utilities/variables.scss';
+
+.login {
+    background-color: $colorUno;
+    color: $colorTres;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 5px;
+    padding: 2rem 4rem;
+    width: auto;
+    border-radius: 10px;
+    
+    .btn {
+        background-color: $colorCinco;
+        border: 0;
+        margin-top: 15px;
+        padding: 0.3rem 0.5rem;
+        border-radius: 5px;
+    }
+    .btn:hover {
+        transform: scale(1.1);
+        color: $colorDos;
+    }
+}

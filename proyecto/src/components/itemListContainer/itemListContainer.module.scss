@@ -1,0 +1,65 @@
+@import "../../sass/utilities/variables.scss";
+
+.contenedorList {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5rem;
+    padding: 2rem 2rem 4rem 2rem;
+    background-color: $colorUno;
+    color: $colorTres;
+    margin-top: 12rem;
+    width: 60%;
+    border-radius: 10px;
+    min-height: 50vh;
+    .titulo {
+        position: relative;
+        top: 1.5rem;
+    }
+
+    .buscarSocios{
+        position: absolute;
+        top: 3rem;
+        font-size: 14px;
+        width: 100%;
+        padding-right: 15%;
+        display: flex;
+        justify-content: right;
+        align-items: center;
+        gap: 8px;
+        background-color: rgb(187, 150, 77);
+        height: 1.4rem;
+        color: $colorTres;
+        input {
+            background-color: $colorTres;
+            font-size: 12px;
+            height: 16px;
+        }
+    }
+}
+
+.btnVolver {
+    position: fixed;
+    bottom: 1rem;
+    right: 5rem;
+    font-weight: 550;
+    padding: 0.3rem 0.5rem;
+    border-radius: 5px;
+    text-decoration: none;
+    background-color: $colorCuatro;
+    color: $colorTres;
+}
+
+@media (max-width: 800px) {
+    
+    .contenedorList {
+        width: 80%;
+        padding: 0rem 1rem 2rem 1rem;
+    }
+
+    .btnVolver{
+        bottom: 2rem;
+        right: 2rem;
+    }
+}

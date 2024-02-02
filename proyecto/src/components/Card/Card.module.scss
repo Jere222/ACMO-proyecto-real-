@@ -1,0 +1,21 @@
+@import "../../sass/utilities/variables.scss";
+
+.card {
+    background-color: $colorDos;
+    padding: 1rem;
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    a{
+        margin-left: 1rem;
+        text-decoration: none;
+        color: $colorTres;
+    }
+    
+    .btnCard {
+        background-color: $colorTres;
+        color: $colorUno;
+        text-align: center;
+    }
+}
