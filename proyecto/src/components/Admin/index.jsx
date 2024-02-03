@@ -29,9 +29,9 @@ const Admin = () => {
   
   return (
     <div className={styles.admin}>
-        <Link to='/admin/socios'>Socios</Link>
-        <Link to='/admin/cumpleaneros'>Cumpleañeros</Link>
-        <Link to='/admin/nuevos'>Nuevos socios</Link>
+        <Link to='/admin/socios/1'>Socios</Link>
+        <Link to='/admin/cumpleaneros/1'>Cumpleañeros</Link>
+        <Link to='/admin/nuevos/1'>Nuevos socios</Link>
         <Link onClick={descargarCopia}>Descargar copia de seguridad</Link>
     </div>
   )

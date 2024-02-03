@@ -4,14 +4,16 @@ import { deleteDoc, doc, updateDoc } from 'firebase/firestore'
 import db from '../../../db/firebase-config'
 import Swal from 'sweetalert2'
 
-const Card = ({socio, tarea}) => {
+const Card = ({socio, tarea, setCambioSocios, cambioSocios}) => {
   const socioRef = doc(db, "Socios", socio.id)
 
   const quitarNuevo = async() =>{
     await updateDoc(socioRef, {"socioNuevo": false}) 
+    setCambioSocios(!cambioSocios)
   }
   const PasarANuevo = async() =>{
     await updateDoc(socioRef, {"socioNuevo": true}) 
+    setCambioSocios(!cambioSocios)
   }
   const quitar = async() =>{
     Swal.fire({
@@ -28,15 +30,15 @@ const Card = ({socio, tarea}) => {
       if (result.isConfirmed) {
         Swal.fire("Socio eliminado")
         deleteDoc(socioRef) 
+        setCambioSocios(!cambioSocios) 
       }
     })
   }
-  
   return (
     <div className={styles.card}>
-      <Link to={`/admin/socios/${socio.id}`}>
+      <Link to={`/admin/socio/${socio.id}`}>
         <h2>{socio.apellido + " " + socio.nombre}</h2>
-        <p>{socio.fechaNacimiento}</p>
+        <p>{socio.fechaNacimiento.slice(8,10) + socio.fechaNacimiento.slice(4,8) + socio.fechaNacimiento.slice(0,4)}</p>
         <p>{socio.localidad}</p>
         <p>{socio.domicilio}</p>
         <p>{socio.nroCelular}</p>

@@ -19,8 +19,8 @@ function App() {
             <Route path='/socios/formulario' element={<Formulario/>} />
               <Route path='/admin' element={<Admin />} />
               <Route path='/admin/auth' element={<Login />}/>
-              <Route path='/admin/:tarea' element={<ItemListContainer />} />
-              <Route path='/admin/socios/:id' element={<Formulario />} />
+              <Route path='/admin/:tarea/:pag' element={<ItemListContainer />} />
+              <Route path='/admin/socio/:id' element={<Formulario />} />
           </Routes>
         </IsAdminProvider>
         

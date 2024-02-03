@@ -26,3 +26,12 @@
       color: $colorCinco;  
     }
 }
+
+@media (max-width: 800px) {
+  .admin {
+    width: 80%;
+    padding: 3rem 1rem;
+    gap: 3rem;
+    border-radius: 10px;
+  }
+}

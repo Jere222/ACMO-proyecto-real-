@@ -27,7 +27,6 @@ const Formulario = () => {
     let band = true;
     const sociosCollection = await getDocs(sociosRef)
     const socios = sociosCollection.docs.map(doc => ({"dni": doc.data().dni, "id": doc.id}))
-    console.log(socios[0])
     if(id) socios.forEach(socio => (((socio.dni ==  inputDni)&&(socio.id != id))? (band = false) : (band=band)))
     else socios.forEach(socio => ((socio.dni ==  inputDni)? (band = false) : (band=band)))
     if(!band){
@@ -53,8 +52,8 @@ const Formulario = () => {
     const band = await getBand()
     if(band){
       const socio = {
-        "nombre": inputNom,
-        "apellido": inputAp,
+        "nombre": inputNom.toUpperCase(),
+        "apellido": inputAp.toUpperCase(),
         "fechaNacimiento": inputFechaNac,
         "localidad": inputLocalidad,
         "domicilio": inputDom,
@@ -76,7 +75,7 @@ const Formulario = () => {
       else {
         addDoc(sociosRef, {...socio, ...{"socioNuevo": true}})
         Swal.fire({
-          title: "Muchas gracias por tu colaboracion",
+          title: "Muchas gracias por tu ayuda con la actualizacion de datos",
           icon: "success",
           confirmButtonColor: "green",
           confirmButtonText: "De nada!",
@@ -93,7 +92,6 @@ const Formulario = () => {
   const setSocio = async() => {
     const doc = await getDoc(socioRef)
     const socio = doc.data()
-    console.log(socio)
     setInputNom(socio.nombre)
     setInputAp(socio.apellido)
     setInputFechaNac(socio.fechaNacimiento)
