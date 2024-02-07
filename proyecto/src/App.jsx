@@ -4,18 +4,18 @@ import Formulario from './components/Formulario'
 import ItemListContainer from './components/itemListContainer'
 import Admin from './components/Admin'
 import Login from './components/Login'
+import Navbar from './components/Navbar'
+import Home from './components/Home'
 import {IsAdminProvider} from "./contexts/isAdminContext";
 
 function App() {
   
   return (
       <div className='container'>
-        <nav>
-          <img src="https://i.ibb.co/BHD8VYb/escudo.jpg" alt="logo ACMO" />
-          <h1>ACMO</h1>
-        </nav>
+        <Navbar />
         <IsAdminProvider>
           <Routes>
+            <Route path='/' element={<Home />} />
             <Route path='/socios/formulario' element={<Formulario/>} />
               <Route path='/admin' element={<Admin />} />
               <Route path='/admin/auth' element={<Login />}/>

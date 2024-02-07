@@ -1,0 +1,21 @@
+@import "../../sass/utilities/variables.scss";
+
+nav {
+    font-family: none;
+    display: flex;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 3rem;
+    background-color: $colorCuatro;
+    color: $colorTres;
+    padding: 0.8rem 0 0.8rem 2rem;
+    gap: 1rem;
+    align-items: center;
+    z-index: 2;
+
+    img {
+      height: 2.2rem;
+      border-radius: 200px;
+    }
+}
